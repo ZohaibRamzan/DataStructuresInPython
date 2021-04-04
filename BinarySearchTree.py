@@ -34,7 +34,7 @@ class BinarySearchNode():
         return left_elements[-1]
 
 
-# Binary Search Traversal Techniques 1-In order traversal,  2- pre-order traversal 3- post-order traversal
+# Binary Search Tree Traversal Techniques 1-In order traversal,  2- pre-order traversal 3- post-order traversal
 # In-order traversal produces ascending sorted list(set)
     def In_order_Traversal(self):
          elements=[]
