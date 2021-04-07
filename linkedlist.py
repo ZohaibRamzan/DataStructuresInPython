@@ -10,10 +10,12 @@ class linkedlist:
     def __init__(self):
         self.head= None
 
+ # insert element to linkedlist
     def add_element(self, data):
         node=Node(data,self.head)
         self.head=node
         return
+ # remove the element as per index value 
     def remove_at_index(self,index):
         leng=self.get_length()
         #print(leng)
@@ -23,16 +25,27 @@ class linkedlist:
                 itr.next=itr.next.next
                 break
             itr=itr.next
-
-
-
-
+          
+# reverse linkedlist
+        def reverse_ll(self):
+        itr=self.head
+        arr=[]
+        while itr:
+            arr.append(itr.data)
+            itr=itr.next
+        b = linkedlist()
+        for element in arr:
+            print(element)
+            b.insert_element((element))
+        b.print_ll()
+        
+# list to linkedlist 
     def List_to_ll(self, arr):
         for ele in arr:
             self.insert_at_end(ele)
 
 
-
+# insert element at end of linkedlist
     def insert_at_end(self,data):
         if self.head==None:   # means empty object
             self.head=Node(data,None)
@@ -53,7 +66,8 @@ class linkedlist:
             linked_list+=str(itr.data)+ '--->'
             itr=itr.next
         print(linked_list)
-
+        
+# get length of linkedlist
     def get_length(self):
         count=0
         itr=self.head
